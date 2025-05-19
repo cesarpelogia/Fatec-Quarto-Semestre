@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.composite.dto.MusicDTO;
-import br.edu.composite.entity.Music;
+import br.edu.composite.entity.MusicEntity;
 import br.edu.composite.repository.MusicRepository;
 
 @Service
@@ -16,51 +16,27 @@ public class MusicService {
     @Autowired
     private MusicRepository musicRepository;
 
-    public Optional<List<Music>> getAllMusics() {
-        List<Music> musics = musicRepository.findAll()
-                .stream()
-                .map(music -> {
-                    music.setTitle(music.getTitle());
-                    music.setArtist(music.getArtist());
-                    music.setDuration(music.getDuration());
-                    return music;
-                })
+    public Optional<List<MusicDTO>> getAllMusics(){
+        List<MusicDTO> musicDTOs = musicRepository.findAll().stream()
+                .map(music -> new MusicDTO(music.getTitle(), music.getArtist(), music.getDuration()))
                 .toList();
-        return Optional.of(musics);
+        return Optional.of(musicDTOs);
     }
 
-    public Optional<Music> getMusicById(Long id) {
+    public Optional<MusicDTO> getMusicById(Long id){
         return musicRepository.findById(id)
-                .map(music -> {
-                    music.setTitle(music.getTitle());
-                    music.setArtist(music.getArtist());
-                    music.setDuration(music.getDuration());
-                    return music;
-                });
+                .map(music -> new MusicDTO(music.getTitle(), music.getArtist(), music.getDuration()));
     }
 
-    public Music addMusic(MusicDTO musicDTO) {
-        if(musicDTO == null) {
-            throw new IllegalArgumentException("A música não pode ser nula");
+    public MusicEntity createMusic(MusicDTO music){
+        if (music.getTitle() == null || music.getArtist() == null || music.getDuration() <= 0) {
+            throw new IllegalArgumentException("Dados inválidos para criação da música");
         }
-        if(musicRepository.findByMusicTitle(musicDTO.getTitle()).isPresent() &&
-           musicRepository.findByArtists(musicDTO.getArtist()).isPresent()) {
-            throw new IllegalArgumentException("A música já existe");
-        }
-        Music musicToSave = new Music();
-        musicToSave.setTitle(musicDTO.getTitle());
-        musicToSave.setArtist(musicDTO.getArtist());
-        musicToSave.setDuration(musicDTO.getDuration());
-        return Optional.ofNullable(musicRepository.save(musicToSave))
-                .orElseThrow(() -> new RuntimeException("Erro ao salvar a música"));
-    }
 
-    public String deleteMusic(Long id) {
-        if(musicRepository.findById(id).isPresent()) {
-            musicRepository.deleteById(id);
-            return "Música deletada com sucesso";
-        } else {
-            throw new IllegalArgumentException("A música não existe");
-        }
+        MusicEntity newMusic = new MusicEntity();
+        newMusic.setTitle(music.getTitle());
+        newMusic.setArtist(music.getArtist());
+        newMusic.setDuration(music.getDuration());
+        return musicRepository.save(newMusic);
     }
 }

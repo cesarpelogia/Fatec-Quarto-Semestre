@@ -7,31 +7,55 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.edu.composite.compositeInterface.CompositeInterface;
 import br.edu.composite.dto.PlaylistDTO;
-import br.edu.composite.entity.Music;
-import br.edu.composite.entity.Playlist;
+import br.edu.composite.entity.PlaylistEntity;
 import br.edu.composite.repository.PlaylistRepository;
 
 @Service
 public class PlaylistService {
 
     @Autowired
-    private PlaylistRepository  playlistRepository;
+    private PlaylistRepository playlistRepository;
 
-    public Optional<List<Playlist>> getAllPlaylists() {
-        return Optional.of(playlistRepository.findAll());
+    public Optional<List<PlaylistDTO>> getAllPlaylists() {
+        List<PlaylistDTO> playlistDTOs = playlistRepository.findAll().stream()
+                .map(playlist -> new PlaylistDTO(
+                        playlist.getTitle(),
+                        playlist.getItems() != null ?
+                            playlist.getItems().stream()
+                                .map(item -> (CompositeInterface) item)
+                                .toList()
+                            : new ArrayList<>(),
+                        playlist.getDuration(),
+                        playlist.getNumberOfMusics()))
+                .toList();
+        return Optional.of(playlistDTOs);
     }
 
-    public Optional<Playlist> getPlaylistById(Long id) {
-        return playlistRepository.findById(id);
+    public Optional<PlaylistDTO> getPlaylistById(Long id) {
+        return playlistRepository.findById(id)
+                .map(playlist -> new PlaylistDTO(
+                    playlist.getTitle(),
+                    playlist.getItems() != null ?
+                        playlist.getItems().stream()
+                        .map(item -> (CompositeInterface) item)
+                        .toList()
+                    : new ArrayList<>(),
+                    playlist.getDuration(),
+                    playlist.getNumberOfMusics()));
     }
 
-    public Playlist addPlaylist(PlaylistDTO playlistDTO) {
-        Playlist playlist = new Playlist();
-        playlist.setName(playlistDTO.getName());
-        playlist.setMusics(new ArrayList<Music>());
-        playlist.setDuration(0);
-        playlist.setNumberOfMusics(0);
-        return playlistRepository.save(playlist);
+    public PlaylistEntity createPlaylist(PlaylistDTO playlist) {
+        if (playlist.getTitle() == null || playlist.getItems() == null) {
+            throw new IllegalArgumentException("Dados inválidos para criação da playlist");
+        }
+
+        PlaylistEntity newPlaylist = new PlaylistEntity();
+        newPlaylist.setTitle(playlist.getTitle());
+        newPlaylist.setItems(null);
+        newPlaylist.setDuration(playlist.getDuration());
+        newPlaylist.setNumberOfMusics(playlist.getNumberOfMusics());
+        return playlistRepository.save(newPlaylist);
     }
 }
