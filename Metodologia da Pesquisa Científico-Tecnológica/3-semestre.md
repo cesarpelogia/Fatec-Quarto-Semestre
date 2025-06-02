@@ -2,83 +2,139 @@
 
 ## Introdução
 
+Durante o terceiro semestre do curso de Tecnologia em Banco de Dados da Fatec São José dos Campos - Jessen Vidal, atuei como Scrum Master no grupo Morpheus. Nessa função, fui responsável por organizar e facilitar o trabalho da equipe no desenvolvimento de um sistema para mapeamento de portais de notícias. Minhas atividades incluíram o gerenciamento de demandas e prazos, acompanhamento do progresso do time e prestação de contas ao professor orientador (M2), que supervisionava o andamento do projeto.
 
+---
 
 ## Contatos
-* [GIT](https://github.com/cesarpelogia)
-* [LinkedIn](https://www.linkedin.com/in/cesar-augusto-anselmo-pelogia-truyts-94a08a268/)
+
+- [GitHub](https://github.com/cesarpelogia)
+- [LinkedIn](https://www.linkedin.com/in/cesar-augusto-anselmo-pelogia-truyts-94a08a268/)
+
+---
 
 ## Meus Principais Conhecimentos
 
+- Java
+- Vue.Js
+- Java Swing
+- Maven
+- Javascript
+
+---
+
 ## Meus Projetos
 
-### Em 2024-2
+### Projeto Desenvolvido em 2024-2
+
 Foi desenvolvido um sistema para mapeamento de portais de notícias com o objetivo de capturar e armazenar informações relevantes, alinhadas ao foco estratégico definido. A aplicação realiza a coleta rotineira de dados, permitindo a criação de um histórico que poderá ser utilizado futuramente para análises baseadas em inteligência artificial e machine learning.
 
-[GIT](https://github.com/cesarpelogia/FatecMorpheus)
+🔗 [GitHub do Projeto](https://github.com/cesarpelogia/FatecMorpheus)
 
-#### Tecnologias Utilizadas
-Durante o desenvolvimento do projeto, foram utilizadas as seguintes tecnologias:
+---
 
-- Java (versão 21)
-Linguagem principal do backend, utilizada para a construção da lógica de negócio e controle da aplicação.
+### Tecnologias Utilizadas
 
-- Spring Boot (versão 3.3.3)
-Framework Java que facilita a criação de aplicações web robustas e escaláveis, com foco em produtividade e boas práticas.
+- **Java (versão 21)**  
+  Linguagem principal do backend, utilizada para a construção da lógica de negócio e controle da aplicação.
 
-- Maven (versão 3.8.1)
-Ferramenta de gerenciamento de dependências e automação de build utilizada no projeto backend.
+- **Java Swing (JFrame)**  
+  Utilizado para o desenvolvimento da interface gráfica do gráfico Burndown.
 
-- MySQL (versão 8.0)
-Sistema de gerenciamento de banco de dados relacional utilizado para armazenar e consultar as informações persistidas.
+- **JFreeChart**  
+  Biblioteca Java empregada para a geração dos gráficos Burndown.
 
-- JDBC MySQL (versão 8.0.26)
-Driver utilizado para a comunicação entre a aplicação Java e o banco de dados MySQL.
+- **GitHub Actions**  
+  Ferramenta de automação utilizada para executar periodicamente o script Java responsável por atualizar o gráfico Burndown.
 
-- Vue.js (versão 3)
-Framework progressivo para construção da interface do usuário, utilizado no frontend do projeto.
+- **Spring Boot (versão 3.3.3)**  
+  Framework Java que facilita a criação de aplicações web robustas e escaláveis.
 
-- JavaScript (versão ES6+)
-Linguagem utilizada no desenvolvimento frontend, com sintaxe moderna e recursos atualizados.
+- **Maven (versão 3.8.1)**  
+  Ferramenta de gerenciamento de dependências e automação de build.
 
-- Bootstrap (versão 5.3.3)
-Framework CSS utilizado para estilização da interface, garantindo responsividade e componentes visuais consistentes.
+- **MySQL (versão 8.0)**  
+  Sistema de gerenciamento de banco de dados relacional.
 
-#### Contribuições Pessoais
+- **JDBC MySQL (versão 8.0.26)**  
+  Driver utilizado para a comunicação entre a aplicação Java e o banco de dados.
+
+- **Vue.js (versão 3)**  
+  Framework progressivo para construção da interface do usuário.
+
+- **JavaScript (versão ES6+)**  
+  Linguagem utilizada no desenvolvimento frontend.
+
+- **Bootstrap (versão 5.3.3)**  
+  Framework CSS utilizado para estilização da interface.
+
+---
+
+## Contribuições Pessoais
 
 Como Scrum Master no projeto do terceiro semestre, fui responsável por facilitar o uso efetivo do framework Scrum e garantir que os princípios ágeis fossem aplicados corretamente. Minhas principais contribuições incluem:
 
-- *Planejamento e organização das sprints*
-Estruturei e priorizei o backlog, organizei o quadro Kanban e defini as tarefas com clareza, o que me permitiu aprimorar meu entendimento sobre a arquitetura de backend e iniciar meu aprendizado em frontend, área na qual ainda não tinha experiência prévia.
+### Planejamento e organização das sprints
 
-- *Condução das cerimônias Scrum*
-Facilitei as reuniões diárias (Daily Meetings), promovendo alinhamento constante entre os membros da equipe. Também conduzi as Sprint Plannings, Sprint Reviews e Retrospectives, garantindo ciclos de melhoria contínua e entregas mais consistentes.
+Estruturei e priorizei o backlog, organizei o quadro Kanban e defini as tarefas com clareza.
 
-- *Desenvolvimento de gráfico Burndown automatizado*
-Criei um gráfico Burndown que se atualiza automaticamente, utilizando Java, JFreeChart e GitHub Actions, proporcionando uma visualização clara e atualizada do progresso da sprint diretamente no repositório.
+### Condução das cerimônias Scrum
 
-- *Acompanhamento do progresso da equipe*
-Monitorei o andamento das tarefas diariamente, identifiquei riscos de atraso e realoquei recursos quando necessário, assegurando a entrega dos compromissos assumidos.
+Facilitei as reuniões diárias (Daily Meetings), Sprint Plannings, Sprint Reviews e Retrospectives.
 
-- *Gestão dos prazos e das entregas*
-Controlei os cronogramas das sprints e garanti a execução dentro dos prazos estabelecidos, reforçando o foco da equipe nas metas planejadas.
+### Desenvolvimento de gráfico Burndown automatizado
 
-- *Promoção de um ambiente colaborativo*
-Atuei como facilitador na comunicação entre os desenvolvedores, respeitando suas individualidades e responsabilidades externas, direcionando tarefas com base no nível técnico de cada um, sempre incentivando a evolução profissional da equipe.
+Criei um gráfico Burndown que se atualiza automaticamente com Java, JFreeChart e GitHub Actions.
 
-#### Hard Skills
+### Acompanhamento do progresso da equipe
+
+Monitorei o andamento das tarefas diariamente, identifiquei riscos de atraso e realoquei recursos.
+
+### Gestão dos prazos e das entregas
+
+Controlei os cronogramas das sprints e garanti a execução dentro dos prazos estabelecidos.
+
+### Promoção de um ambiente colaborativo
+
+Atuei como facilitador na comunicação entre os desenvolvedores, incentivando a evolução profissional da equipe.
+
+---
+
+## Hard Skills
 
 Durante o desenvolvimento do projeto, aprimorei as seguintes habilidades técnicas:
 
-- Análise e decomposição de tarefas: Melhorei minha capacidade de compreender uma tarefa complexa e dividi-la em subtarefas mais objetivas e executáveis.
-- Versionamento com Git: Ganhei mais domínio no uso do Git para controle de versões.
-- Uso do GitHub Kanban: Aprendi a utilizar o quadro Kanban do GitHub para organizar, priorizar e acompanhar as demandas da equipe.
-- Gerenciamento de repositórios: Aperfeiçoei práticas de controle e manutenção do repositório do projeto.
+- **Análise e decomposição de tarefas**  
+  Melhorei minha capacidade de compreender uma tarefa complexa e dividi-la em subtarefas.
 
-#### Soft Skills
+- **Versionamento com Git**  
+  Ganhei mais domínio no uso do Git para controle de versões.
+
+- **Uso do GitHub Kanban**  
+  Aprendi a utilizar o quadro Kanban do GitHub para organização e acompanhamento de tarefas.
+
+- **Gerenciamento de repositórios**  
+  Aperfeiçoei práticas de controle e manutenção do repositório do projeto.
+
+- **Desenvolvimento gráfico com JFrame (Java Swing)**  
+  Criação de visualizações dinâmicas do progresso das sprints com gráficos.
+
+- **Automação com GitHub Actions**  
+  Automação de geração e commit de gráficos Burndown atualizados no repositório.
+
+---
+
+## Soft Skills
 
 Também desenvolvi habilidades interpessoais importantes, como:
 
-- Empatia e escuta ativa: Passei a entender melhor as realidades e limitações individuais dos membros da equipe, respeitando seus tempos e responsabilidades externas.
-- Liderança colaborativa: Direcionei tarefas com base no nível de conhecimento de cada membro, respeitando seus ritmos de aprendizado.
-- Apoio e desenvolvimento da equipe: Busquei sempre oferecer suporte técnico e motivacional, promovendo o crescimento de todos os envolvidos.
+- **Empatia e escuta ativa**  
+  Compreensão das limitações e realidades individuais dos membros da equipe.
+
+- **Liderança colaborativa**  
+  Direcionamento de tarefas com base no conhecimento técnico de cada membro.
+
+- **Apoio e desenvolvimento da equipe**  
+  Suporte técnico e motivacional, promovendo o crescimento coletivo.
+
+---
