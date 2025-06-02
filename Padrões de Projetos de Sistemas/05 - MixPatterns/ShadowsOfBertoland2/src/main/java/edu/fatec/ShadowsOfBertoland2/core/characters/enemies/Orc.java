@@ -1,4 +1,4 @@
-package edu.fatec.ShadowsOfBertoland2.characters.enemies;
+package edu.fatec.ShadowsOfBertoland2.core.characters.enemies;
 
 public class Orc extends Enemy {
 

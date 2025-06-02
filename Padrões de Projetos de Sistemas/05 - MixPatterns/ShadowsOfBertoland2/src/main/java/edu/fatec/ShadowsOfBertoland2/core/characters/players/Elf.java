@@ -1,4 +1,4 @@
-package edu.fatec.ShadowsOfBertoland2.characters.players;
+package edu.fatec.ShadowsOfBertoland2.core.characters.players;
 
 public class Elf extends Player {
 
